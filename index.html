@@ -1,14 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R Ananth - Portfolio</title>
+    <br> 
+    <br>
+    <br>
+    <br>
+    
     <style>
+        /* CSS styles */
         body {
-            background-color: #cccccc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Change font */
+            background-color: #f9f9f9; /* Light gray background */
             margin: 0;
             padding: 0;
-            overflow: hidden;
+            overflow-x: hidden; /* To prevent horizontal scrolling */
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            z-index: 2;
+            font-size: 24px; /* Larger font size */
         }
 
         .container {
@@ -16,9 +37,9 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            
             z-index: 1;
             transition: opacity 0.5s ease-in-out;
+            animation: slideInUp 0.5s ease; /* Adding animation */
         }
 
         .hidden {
@@ -26,25 +47,106 @@
         }
 
         img {
-            height: 400px;
+            max-width: 100%; /* Ensures image is responsive */
+            height: auto; /* Maintains aspect ratio */
             display: block;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto; /* Center the image horizontally */
+            
+        }
+
+        .about,
+        .projects {
+            max-width: 800px; /* Adjust based on your preference */
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #333; /* Dark text color */
+        }
+
+        .summary {
+            text-align: justify;
+        }
+
+        .project {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .project h3 {
+            margin-top: 0;
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            /* Adjustments for smaller screens */
+            header {
+                padding: 5px; /* Smaller padding */
+                font-size: 20px; /* Smaller font size */
+            }
+
+            .about,
+            .projects {
+                margin: 20px auto;
+            }
         }
     </style>
 </head>
 
 <body>
+    <header>
+        <h1>R Ananth</h1>
+    </header>
+
     <div class="container" id="imageContainer">
-        <img src="ananth.png" alt="ananth">
+        <img src="images/ananth.png" alt="ananth">
+    </div>
+
+    <div class="about">
+        <h2>About Me</h2>
+        <p class="summary">
+            I am R Ananth, a passionate software engineer with a strong foundation in computer science and expertise in
+            developing innovative software solutions. My journey in the world of programming began with a curiosity to
+            understand how technology shapes our lives. Over the years, I have honed my skills in various programming
+            languages and frameworks, allowing me to tackle complex challenges with creativity and precision.
+            <br><br>
+            With a keen eye for detail and a dedication to continuous learning, I strive to deliver high-quality
+            solutions that exceed expectations. I am enthusiastic about leveraging cutting-edge technologies to
+            develop scalable and efficient software applications that make a positive impact.
+        </p>
+    </div>
+
+    <div class="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>Description of Project 1</p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Description of Project 2</p>
+        </div>
+        <!-- Add more project sections as needed -->
     </div>
 
     <script>
+        // JavaScript code to make the image disappear on scroll
         window.addEventListener('scroll', function () {
             var container = document.getElementById('imageContainer');
             var scrollPosition = window.scrollY;
 
-           
+            // You can adjust the threshold value based on when you want the image to start disappearing
             var threshold = 200;
 
             if (scrollPosition > threshold) {
@@ -54,65 +156,6 @@
             }
         });
     </script>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-
-    <p>wdwdwdwddwdwdwddwdwdw</p>
-    
 </body>
 
 </html>
